@@ -4,6 +4,7 @@
 #define MyAppName "Stammbaumgenerator"
 #define MyAppVersion "1.0.0.0"
 #define MyAppExeName "Stammbaumgenerator.exe"
+#define MyAppURL "www.http://stammbaumgenerator.great-site.net"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -11,16 +12,19 @@
 AppId={{622A0C08-2F9F-4D3A-868B-07577889496B}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
+AppPublisherURL={#MyAppURL}
+AppSupportURL={#MyAppURL}
+AppUpdatesURL={#MyAppURL}
 ;AppVerName={#MyAppName} {#MyAppVersion}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=C:\gui\licences\license.txt
+LicenseFile=C:\004 - M  A  X  I  M\gui\licences\gpl-3.0.txt
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=C:\gui\installer
+OutputDir=C:\004 - M  A  X  I  M\gui\installer
 OutputBaseFilename=Stammbaumgenerator-setup
-SetupIconFile=C:\gui\dist\img\icon.ico
+SetupIconFile=C:\004 - M  A  X  I  M\gui\dist\img\icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -56,9 +60,9 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\gui\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\gui\dist\vbaProject.bin"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\gui\dist\img\*"; DestDir: "{app}\img"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\004 - M  A  X  I  M\gui\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\004 - M  A  X  I  M\gui\dist\vbaProject.bin"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\004 - M  A  X  I  M\gui\dist\img\*"; DestDir: "{app}\img"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
