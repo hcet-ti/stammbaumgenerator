@@ -8,7 +8,7 @@ from tkinter import filedialog
 #import configparser
 import numpy as np
 import xlsxwriter
-
+import webbrowser
 
 
 class Stammbaum:
@@ -325,6 +325,10 @@ root.iconbitmap('./img/icon.ico')
 currentfile = ''
 
 
+def showTutorial():
+    webbrowser.open('http://stammbaumgenerator.great-site.net/tutorial.html', new=0)
+def showFAQ():
+    webbrowser.open('http://stammbaumgenerator.great-site.net/faq.html#', new=0)
 def removeGeneration():
     global personen
     last = int((len(personen) + 1) / 2 - 1)
@@ -380,7 +384,8 @@ def refreshTree():
                     value = "───"
                     ttk.Label(secondframe, text=value, font="Ariel 10").grid(column=x, row=y, sticky=(N, E, S, W))
                 else:
-                    ttk.Label(secondframe, text=value, font="Ariel 10").grid(column=x, row=y, sticky=(N, E, S, W))
+                    pass
+                    #ttk.Label(secondframe, text=value, font="Ariel 10").grid(column=x, row=y, sticky=(N, E, S, W))
 def onOpen():
     input = filedialog.askopenfilename(initialdir = "/",title = "Datei öffnen",filetypes = (("JSON Dateien","*.json"),("Alle Dateien","*.*")))
     try: 
@@ -775,7 +780,8 @@ filemenu.add_command(label="Exportieren", command=exportToExcel)
 filemenu.add_command(label="Beenden", command=root.quit)
 
 helpmenu = Menu(menubar, tearoff=0)
-#helpmenu.add_command(label="Häufig gestellete Fragen")
+helpmenu.add_command(label="Häufig gestellete Fragen", command=showFAQ)
+helpmenu.add_command(label="Tutorial", command=showTutorial)
 helpmenu.add_command(label="Version", command=showVersion)
 
 editmenu = Menu(menubar, tearoff=0)
