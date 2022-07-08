@@ -7,3 +7,4 @@ opensource tool for creating excel-familytrees
 - change the split character in the name of a person from a space to something different, so that you can use the space character in both namespaces 
 - remove the commandline
 - Add other languages
+- Add settings
