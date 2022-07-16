@@ -884,7 +884,7 @@ def exportToExcel():
 
     os.startfile(txt.excelTitle + personen.get('1').get(txt.name).replace(u"\U0000FFFF", " ") + '.xlsm')
 def showVersion():
-    messagebox.showinfo(txt.version, txt.versionText)  # (Major version).(Minor version).(Revision number).(Build number)
+    messagebox.showinfo(txt.version, "IT-Tech © 2022\n" + txt.versionText)  # (Major version).(Minor version).(Revision number).(Build number)
 def showSettings():
     def changeLang(event):
         global config
