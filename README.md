@@ -1,5 +1,6 @@
 # stammbaumgenerator
 opensource tool for creating excel-familytrees
+website: http://stammbaumgenerator.great-site.net
 
 ## To-Do
 - find the error that causes weird gaps upon exporting
